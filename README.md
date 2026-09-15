@@ -2,17 +2,15 @@
 
 ## Project Overview
 
-This project analyzes Israeli government research funding data to identify trends in research investment, institutional funding patterns, emerging research areas, and international collaboration.
+I built this project to analyze public research funding data from the Israeli Government Data Portal (data.gov.il). The goal was to identify trends in research investment, institutional funding patterns, emerging research areas, and international collaboration.
 
-The analysis covers **1,649 research projects** across **2019–2025**, representing approximately **₪722M in total recorded funding**.
+The analysis covers 1,649 research projects across 2019–2025, representing approximately ₪722M in total recorded funding.
 
 The main question guiding the analysis is:
 
 > **How has research funding evolved over the years, and what opportunities can be identified for future investment?**
 
 The goal is to move beyond descriptive statistics and identify funding patterns that may help highlight areas for further investigation and potential future investment.
-
----
 
 ## Key Questions
 
@@ -118,17 +116,6 @@ For research sub-field growth, budget changes were calculated between each sub-f
 
 ---
 
-## Project Structure
-
-```text
-research-funding-analysis/
-│
-├── Research budgets.ipynb
-└── README.md
-```
-
----
-
 ## Data Source
 
 The project uses publicly available research funding data from the **Israeli Government Data Portal**.
@@ -158,16 +145,3 @@ In particular:
 * Large percentage growth can occur when a sub-field starts from a relatively small funding base.
 * Average project budgets can be affected by differences in project scope and research area.
 * International collaboration patterns should not be interpreted as measures of research impact without additional outcome data.
-
----
-
-## Author
-
-**Nechama Markovitz**
-
-Data Analyst | Research & Healthcare Data
-
-MA in Cognitive Psychology
-
-[LinkedIn](#) · [GitHub](#)
-
