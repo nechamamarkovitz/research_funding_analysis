@@ -10,7 +10,7 @@ The main question guiding the analysis is:
 
 > **How has research funding evolved over the years, and what opportunities can be identified for future investment?**
 
-The goal is to move beyond descriptive statistics and identify funding patterns that may help highlight areas for further investigation and potential future investment.
+The goal is to move beyond descriptive statistics and identify funding patterns that may highlight areas for further investigation and potential future investment.
 
 ## Key Questions
 
@@ -64,9 +64,7 @@ For research sub-field growth, budget changes were calculated between each sub-f
 
 ## Things to Keep in Mind
 
-The analysis is descriptive and identifies associations and funding patterns rather than causal relationships; it doesn't explain why certain yearly changes occurred.
-
-Descriptive, Not Causal: This project highlights trends and associations; it doesn't explain why certain yearly changes occurred.
+Descriptive, Not Causal: The analysis identifies trends and associations in funding data but does not establish causal relationships or explain the reasons behind observed changes.
 
 Base-Effect Growth: Massive percentage gains (like Healthy Aging) often happen because the initial starting budget was very small.
 
