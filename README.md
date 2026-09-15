@@ -37,8 +37,8 @@ Several research sub-fields experienced substantial increases between their firs
 
 For example:
 
-* **AI Applications:** approximately ₪1.2M → ₪7.0M (**+481%**)
-* **Healthy Aging:** approximately ₪68K → ₪3.9M (**+5,683%**)
+* AI Applications: approximately ₪1.2M → ₪7.0M (+481%)
+* Healthy Aging: approximately ₪68K → ₪3.9M (+5,683%)
 
 These results highlight research areas that may warrant further investigation when considering future funding priorities.
 
