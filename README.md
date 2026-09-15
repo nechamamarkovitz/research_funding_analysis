@@ -1,2 +1,173 @@
-# research_funding_analysis
-Research Funding Trends &amp; Strategic Investment Analysis | Python, SQL, Pandas, SQLite
+# Research Funding Trends and Strategic Investment Opportunities
+
+## Project Overview
+
+This project analyzes Israeli government research funding data to identify trends in research investment, institutional funding patterns, emerging research areas, and international collaboration.
+
+The analysis covers **1,649 research projects** across **2019–2025**, representing approximately **₪722M in total recorded funding**.
+
+The main question guiding the analysis is:
+
+> **How has research funding evolved over the years, and what opportunities can be identified for future investment?**
+
+The goal is to move beyond descriptive statistics and identify funding patterns that may help highlight areas for further investigation and potential future investment.
+
+---
+
+## Key Questions
+
+The analysis explores five main questions:
+
+1. Which institutions receive the largest number of research projects and the highest total funding?
+2. How does research funding vary across years and research areas?
+3. Which research sub-fields experienced the largest budget growth?
+4. How do active and completed projects differ across institutions and international partners?
+5. How do international research partnerships differ in scale and average project funding?
+
+---
+
+## Key Findings
+
+### Overall Funding
+
+* **1,649 research projects**
+* **₪722M** in total recorded funding
+* **82 institutions**
+* **25 partner countries**
+* **68.89%** of projects are currently active
+* Average project budget: approximately **₪438K**
+
+### Funding Trends
+
+Recorded research funding varies substantially across the 2019–2025 period, with a particularly large decline in 2020 followed by a recovery in subsequent years.
+
+Because the dataset alone does not establish the reason for this variation, the analysis treats these changes as funding patterns rather than causal effects.
+
+### Emerging Research Areas
+
+Several research sub-fields experienced substantial increases between their first and most recent recorded funding years.
+
+For example:
+
+* **AI Applications:** approximately ₪1.2M → ₪7.0M (**+481%**)
+* **Healthy Aging:** approximately ₪68K → ₪3.9M (**+5,683%**)
+
+These results highlight research areas that may warrant further investigation when considering future funding priorities.
+
+### International Collaboration
+
+International partnerships vary considerably in both project volume and average funding.
+
+Germany has the largest number of recorded collaborative projects, while Sweden represents a smaller-volume partnership with a substantially higher average budget per project.
+
+A deeper comparison also reveals differences in the research areas associated with these partnerships.
+
+---
+
+## Methodology
+
+The analysis combines **SQL and Python** to examine funding patterns from multiple perspectives.
+
+### Data Preparation
+
+* Retrieved the dataset from the Israeli Government Data Portal API
+* Loaded the data into Pandas
+* Stored the dataset in an in-memory SQLite database for SQL analysis
+* Standardized selected institution names to reduce inconsistencies
+* Converted EUR-denominated budgets to ILS using year-specific exchange rates
+
+### Analysis
+
+SQL was used for:
+
+* Aggregation and KPI calculation
+* Institutional funding analysis
+* Research-area analysis
+* Active vs. completed project comparisons
+* International collaboration analysis
+* Growth calculations using CTEs and subqueries
+
+Python was used for:
+
+* Data manipulation with Pandas
+* Preparing data for visualization
+* Creating charts with Matplotlib and Seaborn
+* Presenting analytical results and insights
+
+For research sub-field growth, budget changes were calculated between each sub-field's **first and most recent recorded year**, rather than forcing all fields into a 2019–2025 comparison. This accounts for emerging fields that were introduced later in the dataset.
+
+---
+
+## Tools & Technologies
+
+* **Python**
+
+  * Pandas
+  * Matplotlib
+  * Seaborn
+* **SQL**
+
+  * SQLite
+  * CTEs
+  * Subqueries
+  * Aggregations
+  * CASE statements
+* **Jupyter Notebook**
+* **REST API**
+* **Git / GitHub**
+
+---
+
+## Project Structure
+
+```text
+research-funding-analysis/
+│
+├── Research budgets.ipynb
+└── README.md
+```
+
+---
+
+## Data Source
+
+The project uses publicly available research funding data from the **Israeli Government Data Portal**.
+
+The dataset contains information including:
+
+* Budget year
+* Research field and sub-field
+* Institution
+* Project status
+* Researcher
+* Partner country
+* Program
+* Budget
+* Currency
+* Project dates
+
+---
+
+## Limitations
+
+The analysis is descriptive and identifies associations and funding patterns rather than causal relationships.
+
+In particular:
+
+* The dataset does not explain the reasons behind year-to-year funding changes.
+* Large percentage growth can occur when a sub-field starts from a relatively small funding base.
+* Average project budgets can be affected by differences in project scope and research area.
+* International collaboration patterns should not be interpreted as measures of research impact without additional outcome data.
+
+---
+
+## Author
+
+**Nechama Markovitz**
+
+Data Analyst | Research & Healthcare Data
+
+MA in Cognitive Psychology
+
+[LinkedIn](#) · [GitHub](#)
+
