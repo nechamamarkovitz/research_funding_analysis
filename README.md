@@ -23,7 +23,7 @@ The analysis explores five main questions:
 5. How do international research partnerships differ in scale and average project funding?
 
 ## Key Findings
-Big Picture: Analyzed 1,649 projects (68.9% currently active) across 82 local institutions and 25 partner countries. Average project budget sits at ~₪438K.
+Big Picture: Analyzed 1,649 projects (68.9% currently active) across 82 local institutions and 25 partner countries. Average project budget sits at ₪438K.
 
 ### Funding Trends
 
