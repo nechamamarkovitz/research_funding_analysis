@@ -22,18 +22,8 @@ The analysis explores five main questions:
 4. How do active and completed projects differ across institutions and international partners?
 5. How do international research partnerships differ in scale and average project funding?
 
----
-
 ## Key Findings
-
-### Overall Funding
-
-* **1,649 research projects**
-* **₪722M** in total recorded funding
-* **82 institutions**
-* **25 partner countries**
-* **68.89%** of projects are currently active
-* Average project budget: approximately **₪438K**
+Big Picture: Analyzed 1,649 projects (68.9% currently active) across 82 local institutions and 25 partner countries. Average project budget sits at ~₪438K.
 
 ### Funding Trends
 
@@ -60,88 +50,24 @@ Germany has the largest number of recorded collaborative projects, while Sweden 
 
 A deeper comparison also reveals differences in the research areas associated with these partnerships.
 
----
-
 ## Methodology
 
-The analysis combines **SQL and Python** to examine funding patterns from multiple perspectives.
+I extracted the raw dataset via REST API, cleaned and processed it in Python, and loaded it into an in-memory SQLite database for SQL querying.
 
-### Data Preparation
+Data Prep & Cleaning (Python / Pandas): Standardized messy institution names and converted EUR-denominated grants to ILS using historical yearly exchange rates.
 
-* Retrieved the dataset from the Israeli Government Data Portal API
-* Loaded the data into Pandas
-* Stored the dataset in an in-memory SQLite database for SQL analysis
-* Standardized selected institution names to reduce inconsistencies
-* Converted EUR-denominated budgets to ILS using year-specific exchange rates
+Data Analysis (SQL): Used CTEs, subqueries, and window functions to aggregate budgets, track growth metrics, and compare active vs. completed projects.
 
-### Analysis
-
-SQL was used for:
-
-* Aggregation and KPI calculation
-* Institutional funding analysis
-* Research-area analysis
-* Active vs. completed project comparisons
-* International collaboration analysis
-* Growth calculations using CTEs and subqueries
-
-Python was used for:
-
-* Data manipulation with Pandas
-* Preparing data for visualization
-* Creating charts with Matplotlib and Seaborn
-* Presenting analytical results and insights
+Visualization (Matplotlib / Seaborn): Generated visual distributions and trend charts to support the findings.
 
 For research sub-field growth, budget changes were calculated between each sub-field's **first and most recent recorded year**, rather than forcing all fields into a 2019–2025 comparison. This accounts for emerging fields that were introduced later in the dataset.
 
----
+## Things to Keep in Mind
 
-## Tools & Technologies
+The analysis is descriptive and identifies associations and funding patterns rather than causal relationships; it doesn't explain why certain yearly changes occurred.
 
-* **Python**
+Descriptive, Not Causal: This project highlights trends and associations; it doesn't explain why certain yearly changes occurred.
 
-  * Pandas
-  * Matplotlib
-  * Seaborn
-* **SQL**
+Base-Effect Growth: Massive percentage gains (like Healthy Aging) often happen because the initial starting budget was very small.
 
-  * SQLite
-  * CTEs
-  * Subqueries
-  * Aggregations
-  * CASE statements
-* **Jupyter Notebook**
-* **REST API**
-* **Git / GitHub**
-
----
-
-## Data Source
-
-The project uses publicly available research funding data from the **Israeli Government Data Portal**.
-
-The dataset contains information including:
-
-* Budget year
-* Research field and sub-field
-* Institution
-* Project status
-* Researcher
-* Partner country
-* Program
-* Budget
-* Currency
-* Project dates
-
----
-
-## Limitations
-
-The analysis is descriptive and identifies associations and funding patterns rather than causal relationships.
-
-In particular:
-
-* The dataset does not explain the reasons behind year-to-year funding changes.
-* Large percentage growth can occur when a sub-field starts from a relatively small funding base.
-* Average project budgets can be affected by differences in project scope and research area.
-* International collaboration patterns should not be interpreted as measures of research impact without additional outcome data.
+Scope vs. Quality: International project data reflects financial metrics, not scientific impact.
